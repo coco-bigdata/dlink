@@ -1,4 +1,6 @@
 ```shell
+mvn package -Dmaven.test.skip=true
+
 sudo docker-compose build
 sudo docker-compose down
 sudo docker-compose up
