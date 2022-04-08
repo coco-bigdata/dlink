@@ -7,7 +7,7 @@
     <groupId>com.dlink</groupId>
     <artifactId>dlink</artifactId>
     <packaging>pom</packaging>
-    <version>0.6.1-SNAPSHOT</version>
+    <version>0.6.1</version>
 
     <modules>
         <module>dlink-common</module>
@@ -305,6 +305,16 @@
             <dependency>
                 <groupId>com.dlink</groupId>
                 <artifactId>dlink-alert-wechat</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dlink</groupId>
+                <artifactId>dlink-alert-feishu</artifactId>
+                <version>${project.version}</version>
+             </dependency>
+            <dependency>
+                <groupId>com.dlink</groupId>
+                <artifactId>dlink-alert-email</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
