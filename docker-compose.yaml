@@ -31,7 +31,7 @@ services:
       API_HOST: dinky-server
       API_PORT: 8888
     ports:
-      - "8080:80"
+      - "8033:80"
     depends_on:
       - dinky-server
       - database
@@ -44,7 +44,7 @@ services:
       dockerfile: ./docker/mysql/Dockerfile
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     ports:
-      - 3306:3306
+      - 3312:3306
     volumes:
       - mysql-data:/var/lib/mysql
     environment:
