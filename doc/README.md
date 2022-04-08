@@ -25,3 +25,22 @@ sudo docker-compose up -d dinky-web
 sudo docker-compose stop dinky-web
 sudo docker-compose rm dinky-web
 ```
+
+```xml
+<execution>
+    <id>install node and npm</id>
+    <goals>
+      <goal>install-node-and-npm</goal>
+    </goals>
+</execution>
+<execution>
+    <id>npm install</id>
+    <goals>
+      <goal>npm</goal>
+    </goals>
+    <configuration>
+      <!-- 国内npm源加速可在后面加入(去掉空格) - -registry https://repo.huaweicloud.com/repository/npm/ -->
+      <arguments>install --force</arguments>
+    </configuration>
+</execution>
+```
