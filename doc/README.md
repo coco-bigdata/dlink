@@ -1,6 +1,4 @@
 ```shell
-mvn clean package -Dmaven.test.skip=true
-
 cd dlink-web
 # sudo docker run -ti --privileged --volume="$(pwd)":/dlink-web -v $(pwd)/root:/root --rm node:16 bash
 sudo docker run -ti --privileged --volume="$(pwd)":/dlink-web -v $(pwd)/root:/root --rm node:14 bash
@@ -9,6 +7,9 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install
 # npm install
 npm run build
+
+cd ../
+mvn clean package -Dmaven.test.skip=true
 
 sudo docker-compose build
 sudo docker-compose down
