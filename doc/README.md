@@ -34,6 +34,8 @@ sudo docker-compose up dinky-web
 sudo docker-compose up -d dinky-web
 sudo docker-compose stop dinky-web
 sudo docker-compose rm dinky-web
+
+sudo docker rmi `docker images | grep none | awk '{print $3}'`
 ```
 
 ```xml
