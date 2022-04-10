@@ -7,7 +7,7 @@ services:
     image: sivacohan/dinky-server:lastest
     build:
       context: .
-      dockerfile: ./docker/server/Dockerfile
+      dockerfile: ./docker/server/Dockerfile.app
 #    command: [ "/bin/sh", "-c", "java -Dloader.path=./lib,./plugins -Ddruid.mysql.usePingMethod=false -jar -Xms512M -Xmx2048M ./dlink-admin-*.jar" ]
 #    volumes:
 #      # 挂载dinky lib/plugins 目录
