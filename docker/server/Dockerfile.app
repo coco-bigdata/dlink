@@ -11,9 +11,9 @@ RUN tar zxvf /tmp/flink-1.13.6-bin-scala_2.12.tgz -C /app --strip-components=1
 # stage 1, build stage
 FROM maven:3.8.4-jdk-8 as build-stage
 WORKDIR /app
-ADD . /app
+COPY build/dlink-release-*.tar.gz /app
 RUN mkdir /tmp/dist
-RUN tar zxvf ./build/dlink-release-*.tar.gz -C /tmp/dist --strip-components=1
+RUN tar zxvf ./dlink-release-*.tar.gz -C /tmp/dist --strip-components=1
 
 
 # stage 2, production stage
