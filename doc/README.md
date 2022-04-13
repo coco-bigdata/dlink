@@ -35,6 +35,16 @@ sudo docker-compose up -d dinky-web
 sudo docker-compose stop dinky-web
 sudo docker-compose rm dinky-web
 
+jdbc:mysql://172.21.16.11:3307
+
+tar -zxvf flink-1.13.6-bin-scala_2.12.tgz
+cd flink-1.13.6/
+vim conf/flink-conf.yaml
+bin/start-cluster.sh
+bin/stop-cluster.sh
+
+http://49.232.6.131:8087/
+
 sudo docker rmi `docker images | grep none | awk '{print $3}'`
 
 http://www.dlink.top/#/zh-CN/introduce
