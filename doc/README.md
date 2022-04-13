@@ -44,6 +44,7 @@ bin/start-cluster.sh
 bin/stop-cluster.sh
 
 http://49.232.6.131:8087/
+172.21.16.11:8087
 
 sudo docker rmi `docker images | grep none | awk '{print $3}'`
 
