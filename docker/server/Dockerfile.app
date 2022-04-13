@@ -17,7 +17,7 @@ RUN tar zxvf ./dlink-release-*.tar.gz -C /tmp/dist --strip-components=1
 
 
 # stage 2, production stage
-FROM openjdk:8-oracle as production-stage
+FROM openjdk:8-jre as production-stage
 WORKDIR /app
 RUN mkdir plugins
 COPY --from=build-stage /tmp/dist /app
