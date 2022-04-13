@@ -24,7 +24,7 @@ services:
     image: sivacohan/dinky-web:lastest
     build:
       context: .
-      dockerfile: ./docker/web/Dockerfile
+      dockerfile: ./docker/web/Dockerfile.web
     environment:
       # API_HOST dinky 后端服务地址 (可以是IP、或者Hostname)
       # API_HOST dinky 后端服务端口
